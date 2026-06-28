@@ -1,0 +1,235 @@
+/* Footer.css - Rupvan Foundation Redesign */
+
+.footer {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: linear-gradient(180deg, #0F172A 0%, #020617 100%); /* Deep Navy/Slate Slate 900 -> 950 */
+  color: #94A3B8; /* Cool Grey */
+  padding-top: 5rem;
+  margin-top: 6rem;
+  position: relative;
+  border-top: 4px solid var(--secondary-gold);
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+/* Footer Grid Layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 35px;
+  height: 2px;
+  background: var(--secondary-gold);
+  border-radius: 2px;
+}
+
+.footer-about {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: #CBD5E1; /* Slate 300 */
+}
+
+.footer-tagline {
+  font-style: italic;
+  color: var(--secondary-gold);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  background: rgba(217, 119, 6, 0.08);
+  border-left: 3px solid var(--secondary-gold);
+  border-radius: 4px;
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 50%;
+  color: #94A3B8;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-link:hover {
+  background: var(--secondary-gold);
+  color: #000;
+  transform: translateY(-3px);
+  border-color: var(--secondary-gold);
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Footer Navigation Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.85rem;
+}
+
+.footer-link {
+  color: #94A3B8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-link:hover {
+  color: var(--white);
+  transform: translateX(4px);
+}
+
+/* Contact Information section */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  min-width: 22px;
+  width: 22px;
+  height: 22px;
+  color: var(--secondary-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+}
+
+.contact-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #CBD5E1;
+}
+
+.contact-link {
+  color: #CBD5E1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--white);
+}
+
+/* Footer Bottom Credit Section */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.footer-copyright {
+  font-size: 0.85rem;
+  color: #64748B; /* Slate 500 */
+}
+
+.footer-credits {
+  font-size: 0.85rem;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .footer-section:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 4rem;
+  }
+  .footer-section:nth-child(3) {
+    grid-column: auto;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}
